@@ -1,20 +1,20 @@
 <ion-card *ngIf="pokemon" (click)="detail()">
+  <ion-card-header>
+    <ion-card-title color="secondary">
+      #{{ pokemon.id }} {{ pokemon.name | uppercase }}
+    </ion-card-title>
+  </ion-card-header>
   <ion-grid>
     <ion-row align-items-center>
-      <ion-col size="12" size-sm>
-        <img
-          padding
-          [src]="
+      <ion-col col-12 col-sm-12 col-md-8 col-lg-6 col-xl-4>
+        <img padding [src]="
             'https://pokeres.bastionbot.org/images/pokemon/' +
             this.pokemon.id +
             '.png'
-          "
-        />
+          " />
       </ion-col>
       <ion-col padding>
-        <ion-card-title>
-          #{{ pokemon.id }} {{ pokemon.name | uppercase }}
-        </ion-card-title>
+
         <ion-card-content>
           <ion-text>Height: {{ pokemon.height }} feet</ion-text><br />
           <ion-text>Weight: {{ pokemon.weight }} pounds</ion-text><br />

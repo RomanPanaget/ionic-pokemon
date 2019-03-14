@@ -2,3 +2,18 @@
   font-size: 22px;
   margin: 12px;
 }
+
+ion-list {
+  background-color: var(--ion-color-tertiary)
+}
+
+@media (min-width: 800px) {
+  .pokemon-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .pokemon-element {
+    flex: 50%;
+  }
+}

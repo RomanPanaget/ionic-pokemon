@@ -9,10 +9,20 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-item>
-    <ion-label>
-      Welcome to my Yoobic hiring app !
-    </ion-label>
-  </ion-item>
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-label text-center>
+        <h1>Welcome to Romain Panaget's Yoobic hiring app ! </h1><br>
+        <h3>
+          This app is a demo on how to query Pokemon's API with Ionic
+        </h3>
+      </ion-label>
+    </ion-row>
+    <ion-row justify-content-center margin>
+      <ion-button (click)="toggleMenu()">
+        Open Menu
+      </ion-button>
+    </ion-row>
+  </ion-grid>
 </ion-content>
