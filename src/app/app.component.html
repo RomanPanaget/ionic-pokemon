@@ -1,0 +1,43 @@
+<ion-app>
+  <ion-split-pane>
+    <ion-menu>
+      <ion-header>
+        <ion-row justify-content-center>
+          <ion-avatar>
+            <img src="assets/pokeball.png" />
+          </ion-avatar>
+        </ion-row>
+      </ion-header>
+
+      <ion-content>
+        <ion-list lines="full" margin-start>
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
+            <ion-item [routerDirection]="'root'" [routerLink]="[p.url]">
+              <ion-icon
+                color="secondary"
+                slot="start"
+                [name]="p.icon"
+              ></ion-icon>
+              <ion-label>
+                {{ p.title }}
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+      </ion-content>
+
+      <ion-footer>
+        <ion-row justify-content-center>
+          <ion-icon
+            name="power"
+            margin
+            class="large"
+            [routerDirection]="'root'"
+            [routerLink]="['/signin']"
+          ></ion-icon>
+        </ion-row>
+      </ion-footer>
+    </ion-menu>
+    <ion-router-outlet main></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>

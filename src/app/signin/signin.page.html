@@ -1,0 +1,76 @@
+<ion-content margin>
+  <ion-grid class="full-height">
+    <ion-row class="full-height">
+      <ion-col align-self-center>
+        <ion-row justify-content-center>
+          <ion-avatar>
+            <img src="assets/pokeball.png" />
+          </ion-avatar>
+        </ion-row>
+        <ion-row justify-content-center>
+          <ion-text>
+            <h1 margin>
+              Sign In
+            </h1>
+          </ion-text>
+        </ion-row>
+        <ion-list>
+          <ion-item lines="none">
+            <ion-icon name="mail" color="secondary"></ion-icon>
+            <ion-input
+              type="email"
+              placeholder="E-mail"
+              margin-start
+            ></ion-input>
+          </ion-item>
+          <ion-item lines="none">
+            <ion-icon name="lock" color="secondary"></ion-icon>
+            <ion-input
+              type="password"
+              placeholder="Password"
+              margin-start
+            ></ion-input>
+          </ion-item>
+        </ion-list>
+        <ion-row justify-content-end>
+          <ion-text class="little-margin">
+            forgot password?
+          </ion-text>
+        </ion-row>
+        <ion-row justify-content-center>
+          <ion-text>
+            <h4 margin>
+              Sign In with
+            </h4>
+          </ion-text>
+        </ion-row>
+        <ion-row justify-content-center>
+          <ion-icon
+            name="logo-facebook"
+            class="large big-margin facebook"
+          ></ion-icon>
+        </ion-row>
+        <ion-row justify-content-center margin>
+          <ion-col text-end>
+            <ion-button fill="outline" size="default" shape="round">
+              Sign Up
+            </ion-button>
+          </ion-col>
+          <ion-col text-start>
+            <ion-button fill="solid" size="default" shape="round" href="/home">
+              Sign In
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<ion-footer no-border>
+  <ion-row justify-content-center color="primary">
+    <ion-text color="medium" class="little-margin">
+      Terms and conditions
+    </ion-text>
+  </ion-row>
+</ion-footer>

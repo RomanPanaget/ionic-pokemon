@@ -1,0 +1,33 @@
+ion-header {
+  padding: 20%;
+  align-self: center;
+}
+
+ion-menu {
+  ion-header {
+    --background: var(--ion-color-secondary);
+  }
+  ion-content {
+    --background: var(--ion-color-primary);
+    --border-color: var(--ion-color-tertiary);
+    --border-width: 2px;
+    --border-style: solid;
+    ion-list {
+      background-color: var(--ion-color-primary);
+    }
+    ion-item {
+      --color: var(--ion-color-secondary);
+      --background: var(--ion-color-primary);
+    }
+  }
+  ion-footer {
+    --background: var(--ion-color-primary);
+    ion-icon {
+      --color: var(--ion-color-secondary);
+    }
+  }
+}
+
+.large {
+  font-size: 26px;
+}

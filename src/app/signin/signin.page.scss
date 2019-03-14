@@ -1,0 +1,29 @@
+ion-item {
+  width: 100%;
+  --background: var(--ion-color-primary);
+  --color: var(--ion-color-secondary);
+
+  margin-bottom: 3px;
+  --border-radius: 8px;
+  --ion-item-border-color: #00000000;
+}
+
+ion-grid {
+  padding: 3%;
+}
+
+.facebook {
+  color: #414c98;
+}
+
+.large {
+  font-size: 30px;
+}
+
+.full-height {
+  height: 100%;
+}
+
+.little-margin {
+  margin: 6px;
+}

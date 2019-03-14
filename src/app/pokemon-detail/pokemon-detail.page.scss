@@ -1,0 +1,33 @@
+.large {
+  font-size: 22px;
+  margin: 12px;
+}
+
+ion-row {
+  width: 100%;
+  padding: 6px;
+}
+
+.red-border {
+  --background: var(--ion-color-secondary);
+  --border-color: var(--ion-color-primary);
+  --border-width: 4px;
+  --border-radius: 20px;
+
+  width: 100%;
+}
+
+.black-border {
+  --background: var(--ion-color-secondary);
+  --border-color: var(--ion-color-tertiary);
+  --border-width: 4px;
+  --border-radius: 20px;
+
+  width: 100%;
+}
+
+.red-background {
+  --background: var(--ion-color-primary);
+  --color: var(--ion-color-secondary);
+  --border-radius: 20px;
+}

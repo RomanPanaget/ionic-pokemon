@@ -1,0 +1,8 @@
+{
+  "name": "yoonic",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular",
+  "id": "46d16ba2"
+}

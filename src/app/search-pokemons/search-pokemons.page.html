@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Search Pokemon</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item align-items-center color="secondary">
+    <ion-icon name="search" class="large" margin-end></ion-icon>
+    <ion-input
+      #searched
+      placeholder="Search entire name or index (e.g. 'pikachu', '1', ...)"
+      (keyup.enter)="searchPokemon(searched.value)"
+    ></ion-input>
+    <ion-button margin-start (click)="searchPokemon(searched.value)"
+      >GO</ion-button
+    >
+  </ion-item>
+  <ion-label *ngIf="notFound">{{ notFound }}</ion-label>
+  <pokemon-card [pokemon]="pokemon"></pokemon-card>
+</ion-content>

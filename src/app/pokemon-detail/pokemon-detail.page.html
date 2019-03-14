@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Details
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding *ngIf="pokemon">
+  <ion-grid>
+    <ion-row>
+      <ion-item lines="none" class="red-background">
+        <ion-label class="large">
+          #{{ pokemon.id }} {{ pokemon.name | uppercase }}
+        </ion-label>
+      </ion-item>
+    </ion-row>
+    <ion-row>
+      <ion-item class="red-border" lines="none">
+        <ion-row justify-content-center>
+          <ion-img
+            [src]="
+              'https://pokeres.bastionbot.org/images/pokemon/' +
+              this.pokemon.id +
+              '.png'
+            "
+          ></ion-img>
+        </ion-row>
+      </ion-item>
+    </ion-row>
+    <ion-row justify-content-center>
+      <ion-item class="red-background" lines="none">
+        <ion-img *ngFor="let sprite of sprites" [src]="sprite"></ion-img>
+      </ion-item>
+    </ion-row>
+    <ion-row>
+      <ion-item class="black-border">
+        <ion-col>
+          <ion-row>
+            <ion-text>Height: {{ pokemon.height }} feet</ion-text>
+          </ion-row>
+          <ion-row *ngFor="let type of pokemon.types; index as i">
+            <ion-text
+              >Type {{ i + 1 }}: {{ type.type.name | firstLetterCapitalized }}
+            </ion-text>
+          </ion-row>
+        </ion-col>
+        <ion-col>
+          <ion-row>
+            <ion-text>Weight: {{ pokemon.weight }} pounds</ion-text>
+          </ion-row>
+          <ion-row *ngFor="let ability of pokemon.abilities; index as i">
+            <ion-text>
+              Ability {{ i + 1 }}:
+              {{ ability.ability.name | firstLetterCapitalized }}
+            </ion-text>
+          </ion-row>
+        </ion-col>
+      </ion-item>
+    </ion-row>
+  </ion-grid>
+</ion-content>

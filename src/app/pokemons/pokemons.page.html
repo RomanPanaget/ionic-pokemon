@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Pokemons
+    </ion-title>
+
+    <ion-buttons slot="end">
+      <ion-icon
+        name="options"
+        class="large"
+        (click)="toggleOptions()"
+      ></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+
+  <ion-item *ngIf="showOptions" align-items-center color="secondary">
+    <ion-label>From index</ion-label>
+    <ion-input #start text-center placeholder="start"></ion-input>
+    <ion-label>to index</ion-label>
+    <ion-input #end text-center placeholder="end"></ion-input>
+    <ion-button
+      (click)="refreshPokemons(start.value, end.value - start.value + 1)"
+      >OK</ion-button
+    >
+  </ion-item>
+</ion-header>
+
+<ion-content>
+  <pokemon-card
+    *ngFor="let pokemon of pokemons"
+    [pokemon]="pokemon"
+  ></pokemon-card>
+</ion-content>

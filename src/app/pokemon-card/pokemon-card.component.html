@@ -1,0 +1,29 @@
+<ion-card *ngIf="pokemon" (click)="detail()">
+  <ion-grid>
+    <ion-row align-items-center>
+      <ion-col size="12" size-sm>
+        <img
+          padding
+          [src]="
+            'https://pokeres.bastionbot.org/images/pokemon/' +
+            this.pokemon.id +
+            '.png'
+          "
+        />
+      </ion-col>
+      <ion-col padding>
+        <ion-card-title>
+          #{{ pokemon.id }} {{ pokemon.name | uppercase }}
+        </ion-card-title>
+        <ion-card-content>
+          <ion-text>Height: {{ pokemon.height }} feet</ion-text><br />
+          <ion-text>Weight: {{ pokemon.weight }} pounds</ion-text><br />
+          <ion-text *ngFor="let type of pokemon.types; index as i">
+            Type {{ i + 1 }}: {{ type.type.name }}
+            <br />
+          </ion-text>
+        </ion-card-content>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-card>
